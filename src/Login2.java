@@ -27,7 +27,7 @@ public class Login2 {
     }
 
     public void saying2() {
-        System.out.println("Numele tau este  " + getPassword());
+        System.out.println("Parola ta este  " + getPassword());
 
     }
 }
