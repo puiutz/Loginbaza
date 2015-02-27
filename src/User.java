@@ -1,6 +1,9 @@
 /**
  * Created by puiutz on 26.02.2015.
  */
+        import java.io.BufferedWriter;
+        import java.io.File;
+        import java.io.FileWriter;
         import java.io.IOException;
         import java.util.ArrayList;
         import java.util.List;
@@ -12,6 +15,7 @@
 
                 do {
                     Scanner scaneaza = new Scanner(System.in);
+
                     System.out.println("Introdu primul nume");
 
                     // Declaram lista//
@@ -43,18 +47,53 @@
                     for (int i = 0; i < List.size(); i++)
                         System.out.print(List.get(i) + "; ");
 
-                    isCorrect= true;
-                }while (!isCorrect);
+                    isCorrect = true;
+                } while (!isCorrect);
 
 
                 Runtime rs = Runtime.getRuntime();
 
-                    try {
-                        rs.exec("notepad");
-                    } catch (IOException e) {
-                        System.out.println(e);
+                try {
+                    rs.exec("notepad");
+                } catch (IOException e) {
+                    System.out.println(e);
 
-                    }
+
                 }
             }
+
+            private void readFromFile() {
+                try {
+
+
+                    File file = new File("ancuta.txt");
+
+                    // if file doesnt exists, then create it
+                    if (!file.exists()) {
+                        file.createNewFile();
+                    }
+
+                    String content = "Ionuta   "  + "  Parola " + "  Maria " +"  Alta parola ";
+                    FileWriter fw = new FileWriter(file.getAbsoluteFile());
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    bw.write(content);
+                    bw.close();
+
+                    System.out.println("Done");
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                
+                }
+                        }
+
+                    }
+
+
+
+
+
+
 
