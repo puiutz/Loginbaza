@@ -6,6 +6,13 @@
 public class User2 {
     private String name;
     private String password;
+    private String Tokenizer;
+
+    public void setTokenizer(String tokenizer) {
+        Tokenizer = tokenizer;
+    }
+
+
 
     public void setName(String name) {
         this.name = name;
@@ -22,10 +29,9 @@ public class User2 {
         return name;
     }
 
-    public String getPassword() {
-        return password;
+
     }
 
 
-    }
+
 

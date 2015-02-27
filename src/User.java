@@ -8,10 +8,30 @@
         import java.util.ArrayList;
         import java.util.List;
         import java.util.Scanner;
+        import java.util.StringTokenizer;
 
-        public class User {
+public class User {
             public static void main(String[] args) {
                 boolean isCorrect = false;
+
+                String str = " Fisier txt\n" + "Ionuta Parola\n" + "Maria parola\n" + "Viorica parola ";
+                StringTokenizer st = new StringTokenizer(str);
+
+                System.out.println("---- Split by space ------");
+                while (st.hasMoreElements()) {
+                    System.out.println(st.nextElement());
+                }
+
+                System.out.println("---- Split by comma ',' ------");
+                StringTokenizer st2 = new StringTokenizer(str, ",");
+
+                while (st2.hasMoreElements()) {
+                    System.out.println(st2.nextElement());
+                }
+
+
+
+
 
                 do {
                     Scanner scaneaza = new Scanner(System.in);
@@ -27,14 +47,17 @@
 
                     member.setName(temp3);
                     member.getName();
+                    member.setTokenizer(temp3);
                     System.out.println("Introdu parola:");
                     member.setPassword(temp3);
 
                     User2 member2 = new User2();
                     member2.setName(temp3);
+                    member2.setTokenizer(temp3);
                     member2.getName();
 
                     member2.setPassword(temp3);
+
 
 
                     // Adaugam elemente in lista//
@@ -42,6 +65,9 @@
                     List.add("Maria");
                     List.add("Coco");
                     List.add("Liviu");
+                    List.add("Paula");
+                    List.add("Atat");
+
 
                     // Parcurgem lista si ii afisam elementele//
                     for (int i = 0; i < List.size(); i++)
@@ -79,15 +105,18 @@
                     bw.write(content);
                     bw.close();
 
+
                     System.out.println("Done");
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
+            }
+                    }
 
-                }
-                        }
+
+
 
 
 
