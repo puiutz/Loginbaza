@@ -6,44 +6,52 @@
         import java.util.List;
         import java.util.Scanner;
 
-public class User {
-    public static void main(String[] args) {
-        Scanner scaneaza = new Scanner(System.in);
-        System.out.println("Introdu primul nume");
+        public class User {
+            public static void main(String[] args) {
+                boolean isCorrect = false;
+
+                do {
+                    Scanner scaneaza = new Scanner(System.in);
+                    System.out.println("Introdu primul nume");
+
+                    // Declaram lista//
+                    ArrayList List = new ArrayList();
+                    List userList = new ArrayList();
+                    String temp3 = scaneaza.nextLine();
+                    User2 member = new User2();
 
 
-        ArrayList List = new ArrayList();
-        List userList = new ArrayList();
-        String temp3 = scaneaza.nextLine();
-        User2 member = new User2();
-        System.out.println("Introdu parola:");
+                    member.setName(temp3);
+                    System.out.println("Introdu parola:");
+                    member.setPassword(temp3);
+
+                    User2 member2 = new User2();
+                    member2.setName(temp3);
+
+                    member2.setPassword(temp3);
+
+                    // Adaugam elemente in lista//
+                    List.add("Ionut");
+                    List.add("Maria");
+                    List.add("Coco");
+                    List.add("Liviu");
+
+                    // Parcurgem lista si ii afisam elementele//
+                    for (int i = 0; i < List.size(); i++)
+                        System.out.print(List.get(i) + "; ");
+
+                    isCorrect= true;
+                }while (!isCorrect);
 
 
-        member.setName(temp3);
-        member.told();
+                Runtime rs = Runtime.getRuntime();
 
-        member.setPassword(temp3);
-        member.told2();
+                    try {
+                        rs.exec("notepad");
+                    } catch (IOException e) {
+                        System.out.println(e);
 
-        User2 member2 = new User2();
-        member2.setName(temp3);
-        member2.told();
-
-
-        member2.setPassword(temp3);
-        member2.told2();
-
-        List.add(userList);
-
-
-        Runtime rs = Runtime.getRuntime();
-
-        try {
-            rs.exec("notepad");
-        } catch (IOException e) {
-            System.out.println(e);
-
-        }
-    }
-}
+                    }
+                }
+            }
 

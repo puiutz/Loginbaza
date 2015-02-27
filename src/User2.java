@@ -16,9 +16,7 @@ public class User2 {
     }
 
 
-    public void told() {
-        System.out.println("Numele tau este  " + getName());
-    }
+
 
     public String getName() {
         return name;
@@ -28,7 +26,6 @@ public class User2 {
         return password;
     }
 
-    public void told2() {
-        System.out.println("Parola ta este  " + getPassword());
+
     }
-}
+
