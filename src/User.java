@@ -22,13 +22,16 @@
 
 
                     member.setName(temp3);
+                    member.getName();
                     System.out.println("Introdu parola:");
                     member.setPassword(temp3);
 
                     User2 member2 = new User2();
                     member2.setName(temp3);
+                    member2.getName();
 
                     member2.setPassword(temp3);
+
 
                     // Adaugam elemente in lista//
                     List.add("Ionut");
