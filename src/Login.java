@@ -4,18 +4,21 @@
 
 
 import java.util.Scanner;
+import java.io.*;
 
 public class Login {
 
 
     public static void main(String[] args) {
      boolean isCorrect=false;
-        String name ="name";
-         String password= "password";
+
 do{
 
         Scanner scan = new Scanner(System.in);
-            Login2 object = new Login2();
+
+    String nume ="utilizator";
+    String password= "parola";
+        Login2 object = new Login2();
             System.out.println("Introdu primul nume");
 
             String temp =scan.nextLine();
@@ -28,16 +31,30 @@ do{
             object.getPassword();
             object.saying2();
 
-    if(object.getName().equals(temp) && object.getPassword().equals(temp2))
+    if(object.getName().equals(nume) && object.getPassword().equals(password))
 
 
         isCorrect= true;
         }while (!isCorrect);
-        System.out.println(" run notepad as a process , because when here it means you guessed the user/pwd combination");
 
+
+
+
+                Runtime rs = Runtime.getRuntime();
+
+                try {
+                    rs.exec("notepad");
+                }
+                catch (IOException e) {
+                    System.out.println(e);
+                }
+            }
         }
 
-    }
+
+
+
+
 
 
 

@@ -5,6 +5,18 @@ public class Login2 {
 
     private  String name;
     private String password;
+    private String user;
+
+    public String getUser2() {
+        return user;
+    }
+
+    public void setUser2(String user) {
+        this.user = user;
+    }
+
+
+
 
     public String getName() {
         return name;
