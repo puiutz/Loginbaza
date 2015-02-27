@@ -73,7 +73,7 @@
                         file.createNewFile();
                     }
 
-                    String content = "Ionuta   "  + "  Parola " + "  Maria " +"  Alta parola ";
+                    String content = "Fisier txt" +"Ionuta   "  + "  Parola " + "  Maria " + "   parola "+ "Viorica" + "Parola";
                     FileWriter fw = new FileWriter(file.getAbsoluteFile());
                     BufferedWriter bw = new BufferedWriter(fw);
                     bw.write(content);
@@ -89,7 +89,7 @@
                 }
                         }
 
-                    
+
 
 
 
